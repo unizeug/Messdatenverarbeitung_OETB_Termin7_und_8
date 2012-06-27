@@ -36,9 +36,9 @@ for n = 1:1:v-4                 %4 Nulldurchgänge, also 2 Perioden werden betrac
 end
 
 figure(1);
-[AX H1 H2] = plotyy(t,u,nulldurchgang*(max(t)/p),frequenzen,'plot','stem')
+[AX H1 H2] = plotyy(t,u,nulldurchgang*(max(t)/p),frequenzen,'plot','stem');
 % AXIS([0 2 -1.1 1.1]);
 xlabel('Zeitachse [s]');
-set(get(AX(1),'Ylabel'),'String','Amplitude [V]')
-set(get(AX(2),'Ylabel'),'String','Frequenz [Hz]')
+set(get(AX(1),'Ylabel'),'String','Amplitude [V]');
+set(get(AX(2),'Ylabel'),'String','Frequenz [Hz]');
 title('\bf u-Signal und Frequenzanstieg über die Zeit');
