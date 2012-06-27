@@ -18,7 +18,9 @@ disp('length(F)');
 length(F)
 
 disp('length(f2)');
-F2 = interp1(F,T);
+F2 = interp1(F,T,'spline');
+F2 = F2-min(F2);
+F2 = F2 * max(F)/max(F2);
 %F2 = F*length(T)/length(F);
 length(F2)
 
