@@ -6,7 +6,7 @@ t=0:0.001:2;                    % 2 secs @ 1kHz sample rate
 y=chirp(t,0,1,800);              % Start @ DC, cross 150Hz at t=1sec 
 
 figure(1)
-spectrogram(y,256,250,2,1E3); % Display the spectrogram
+[S,F,T]=spectrogram(y,256,250,256,1E3); % Display the spectrogram
 
 
 
