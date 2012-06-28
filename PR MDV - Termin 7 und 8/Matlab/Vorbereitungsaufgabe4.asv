@@ -1,0 +1,16 @@
+%MDV Praktikum 7 Vorbereitungsaufgabe 4 - Testprogramm
+
+%Messwerte laden
+messung1 = load('MotorStrom_10V_100kS.mat');
+messung2 = load('MotorStrom_20V_100kS.mat');
+messung3 = load('MotorStrom_30V_100kS.mat');
+
+%Ströme und Tachos identifizieren
+strom1 = messung1.strom;
+tacho1 = messung1.tacho;
+strom2 = messung2.strom;
+tacho2 = messung2.tacho;
+strom3 = messung3.strom;
+tacho3 = messung3.tacho;
+
+MotorStrom_Amplitudenspektrum(strom1,
