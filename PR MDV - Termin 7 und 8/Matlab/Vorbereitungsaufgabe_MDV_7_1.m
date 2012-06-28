@@ -70,6 +70,6 @@ fs=N/max(t);
 
 
 
-frequenz_imZeitbereich_ausSignal(y,t);
-frequenz_durch_Spektogramm(y,t);
+%frequenz_imZeitbereich_ausSignal(y,t);
+%frequenz_durch_Spektogramm(y,t);
 

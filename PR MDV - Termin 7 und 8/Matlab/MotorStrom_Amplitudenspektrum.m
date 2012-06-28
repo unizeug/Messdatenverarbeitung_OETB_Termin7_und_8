@@ -1,6 +1,6 @@
 %MDV Praktikum 7 Vorbereitungsaufgabe 4
 
-function MotorStrom_Amplitudenspektrum (y, T_ges, f_T, A,farbe, fignum)
+function y_DFT_abs = MotorStrom_Amplitudenspektrum (y, T_ges, f_T, A,farbe, fignum)
 
 % y - Stromvektor
 % T_ges -Dauer des Signals
@@ -14,6 +14,7 @@ y_DFT = fftshift(fft(y));
 N = length(y);
 %Betragsspektrum
 % y_DFT_abs = 10*LOG10(abs(y_DFT)/N);
+y_DFT_abs = (abs(y_DFT)/N);
 %Phasenspektrum
 y_DFT_phase = unwrap(angle(y_DFT)/N);
 %Zeitachse
@@ -32,8 +33,8 @@ xlabel('t [s]');
 ylabel('u [V]');
 %Darstellung des Amplitudenspektrums
 subplot(3,1,2);
-stem(f_DFT, y_DFT,'.-');
-AXIS([-1500 1500 -130 170]);
+stem(f_DFT, y_DFT_abs,'.-');
+AXIS([-1500 1500 0 max(y_DFT_abs)*1.2]);
 % ylim ([-30 5])
 title('Amplitudenspektrum');
 xlabel('f [Hz]');
