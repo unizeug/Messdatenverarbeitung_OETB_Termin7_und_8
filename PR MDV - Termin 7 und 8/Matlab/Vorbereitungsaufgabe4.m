@@ -22,5 +22,5 @@ f_t = 100000;
 T_ges = 1/f_T;
 
 MotorStrom_Amplitudenspektrum(strom1,T_ges,f_T,10,'b',1)
-MotorStrom_Amplitudenspektrum(strom2,T_ges,f_T,10,'b',2)
-MotorStrom_Amplitudenspektrum(strom1,T_ges,f_T,10,'b',3)
+% MotorStrom_Amplitudenspektrum(strom2,T_ges,f_T,10,'b',2)
+% MotorStrom_Amplitudenspektrum(strom1,T_ges,f_T,10,'b',3)
