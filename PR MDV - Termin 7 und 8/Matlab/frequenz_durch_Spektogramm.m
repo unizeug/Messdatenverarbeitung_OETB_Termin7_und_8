@@ -34,4 +34,5 @@ figure(204);
 xlabel('Zeitachse [s]');
 set(get(AX(1),'Ylabel'),'String','Amplitude [V]');
 set(get(AX(2),'Ylabel'),'String','Frequenz [Hz]');
-title('\bf u-Signal und Frequenzanstieg über die Zeit');
+title('\bf Chirp-Signal und Frequenzanstieg über die Zeit');
+end
