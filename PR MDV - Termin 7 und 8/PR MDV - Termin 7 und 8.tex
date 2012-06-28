@@ -74,6 +74,106 @@
         Zeitvektor, die Startfrequenz und weitere Angaben über den Verlauf geben
         konnte. Bei unserem Signal sollte ein linearer Frequenzanstieg erfolgen. 
         
+        Als Beispiel wurde folgendes Signal erstellt:\\
+        t = $0:0.001:2$\\
+        chirp(t,$0$,$1$,$100$)\\
+        
+        Das Chirp-Signal und das Spektrogram dazu sehen so aus:
+        
+        \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-12em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.63, trim = 3cm 9cm 3cm
+                            9cm, clip]{./Bilder/bsp_chirp}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{erzeugtes Chirp-Signal über der Zeit}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.63, trim = 3cm 9cm 3cm
+                            9cm,
+                            clip]{./Bilder/bsp_chirp_spectrogram}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Spektrogramm des erzeugten Chirp-Signals}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                
+                \vspace{1.5em}
+        
+        Man sieht einen Sinusverlauf, dessen Frequenz mit der Zeit immer größer
+        wird. Wir vermuten einen linearen Abstieg der Frequenz. Im Spektrogramm
+        kann man deutlich sehen, dass nach einer Sekunde die Frequenz den
+        erwünschten Wert von $100 Hz$ annimmt.\\
+        
+        Weiterhin kann man die Auswirkung der Eingabevariablen des
+        Spektrogrammaufrufs auf das entstehende Spektrogramm untersuchen. Hier
+        sind zwei Beispiele, in denen einmal die Überlappungsfläche zwischen
+        zwei Segmenten verkleinert wird und einmal die verwendete Fenstergröße
+        vergrößert wird.
+        
+        
+            \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-12em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.63, trim = 3cm 9cm 3cm
+                            9cm,
+                            clip]{./Bilder/bsp_chirp_spectrogram_kleineUeberlappung}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Überlappung zwischen den Segmenten im
+                            Spektrogram wird kleiner gewählt}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.63, trim = 3cm 9cm 3cm
+                            9cm,
+                            clip]{./Bilder/bsp_chirp_spectrogram_grossesFenster}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{verwendete Fensterfolge wird größer
+                            gewählt}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                
+                \vspace{1.5em}
+        
+        Innerhalb des gewählten Fensters, kann das verwendete Signal als
+        stationär angenommen werden. Wird das Beobachtungsfenster kürzer, nimmt
+        auch die Frequenzauflösung ab. Wird das Fenster zu groß, kann wiederum
+        das Signal innerhalb des Fensters nicht mehr als stationär angenommen
+        werden. Die Verschlechterung und Ungenauigkeiten im Spektrogramm kann
+        man in den Plots oben gut erkennen.
+        
         \end{quote}%ende Chirp-Signal erzeugen
 	    
 	    \subsubsection{Matlab-Funktion: Frequenzverlau über der Zeit}
@@ -88,7 +188,7 @@
 	    
 	    \begin{figure}[H]
                     \centering
-                        \includegraphics[scale=0.5, trim = 1cm 8cm 1.5cm 8cm,
+                        \includegraphics[scale=0.7, trim = 1cm 9cm 1.5cm 8cm,
                         clip]{./Bilder/chirpsignal_vs_frequenzanstieg}
                             \caption{Chirp-Signal und der dazugehörige
                             Frequenzanstieg, berechnet aus dem Zeitsignal}
@@ -112,14 +212,12 @@
 	    
 	    \begin{figure}[H]
                     \centering
-                        \includegraphics[scale=0.5, trim = 1cm 8cm 1.5cm 8cm,
+                        \includegraphics[scale=0.7, trim = 1cm 9cm 1.5cm 8cm,
                         clip]{./Bilder/chirpsignal_vs_frequenzanstieg_spectrogram}
                         \caption{Chirp-Signal und der dazugehörige
                             Frequenzanstieg, berechnet aus dem Spektrogramm}
                             \label{fig:./Bilder/chirpsignal_vs_frequenzanstieg_spectrogram}
-                    \end{figure}
-       
-	    \TODO{Bild von Boris plotten und einbinden}
+                    \end{figure} 
 	        
 	    \end{quote}% ende Matlab-Funktion: Frequenzverlauf anhand Spektrogram
          
@@ -149,7 +247,7 @@
     
                         \begin{figure}[H]
                             \label{fig:}
-                            \includegraphics[scale=0.65, trim = 3cm 9cm 3cm
+                            \includegraphics[scale=0.63, trim = 3cm 9cm 3cm
                             8.5cm, clip]{./Bilder/ampl_spektrum_messung1}
                             %FIXME [width=640px,
                              %height=474px]
@@ -161,7 +259,7 @@
     
                         \begin{figure}[H]
                             \label{fig:}
-                            \includegraphics[scale=0.65, trim = 3cm 9cm 3cm
+                            \includegraphics[scale=0.63, trim = 3cm 9cm 3cm
                             8.5cm,
                             clip]{./Bilder/ampl_spektrum_messung2}
                             %FIXME [width=640px,
@@ -178,7 +276,7 @@
 	           
 	           \begin{figure}[H]
                     \centering
-                        \includegraphics[scale=0.5, trim = 1cm 8cm 1.5cm 8cm,
+                        \includegraphics[scale=0.63, trim = 1cm 9cm 1.5cm 8cm,
                         clip]{./Bilder/ampl_spektrum_messung3}
                         \caption{Spektrum des Motorstroms bei 30V}
                \end{figure}
@@ -191,7 +289,7 @@
 	    bestimmt. Dafür wurde genauso vogegangen wie bei den Motorströmen. Die
 	    Spektren sind hier:
 	       
-         \begin{center}
+        \begin{center}
                 \begin{tabular}{ll}
     
                 \hspace{-12em}
@@ -199,7 +297,7 @@
     
                         \begin{figure}[H]
                             \label{fig:}
-                            \includegraphics[scale=0.65, trim = 3cm 9cm 3cm
+                            \includegraphics[scale=0.45, trim = 0.8cm 7cm 3cm
                             8.5cm, clip]{./Bilder/ampl_spektrum_messung1_tacho}
                             %FIXME [width=640px,
                              %height=474px]
@@ -211,7 +309,7 @@
     
                         \begin{figure}[H]
                             \label{fig:}
-                            \includegraphics[scale=0.65, trim = 3cm 9cm 3cm
+                            \includegraphics[scale=0.45, trim = 0.8cm 7cm 3cm
                             8.5cm,
                             clip]{./Bilder/ampl_spektrum_messung2_tacho}
                             %FIXME [width=640px,
@@ -228,8 +326,8 @@
                
                \begin{figure}[H]
                     \centering
-                        \includegraphics[scale=0.5, trim = 1cm 8cm 1.5cm 8cm,
-                        clip]{./Bilder/ampl_spektrum_messung3}
+                        \includegraphics[scale=0.45, trim = 0.8cm 7cm 1.5cm 8cm,
+                        clip]{./Bilder/ampl_spektrum_messung3_tacho}
                         \caption{Spektrum des Tachosignals bei 30V}
                \end{figure}
                
@@ -296,29 +394,30 @@
 
 	\subsection{Codes aus Termin 7}
 	\begin{quote}
-% 	    \subsubsection{FIRfilterung.m}
-% 	    \begin{quote}
-% 	        \lstinputlisting[
-% 	            caption={FIRfilterung},
-% 	            label=lst:Matlab]
-% 	            {./Matlab/FIRfilterung.m}
-% 	    \end{quote}
-% 	    
-% 	    \subsubsection{getFIRTiefpass.m}
-% 	    \begin{quote}
-% 	        \lstinputlisting[
-% 	            caption={getFIRTiefpass},
-% 	            label=lst:Matlab]
-% 	            {./Matlab/getFIRTiefpass.m}
-% 	    \end{quote}
-% 
-%         \subsubsection{Testfunktion.m}
-%         \begin{quote}
-%             \lstinputlisting[
-%                 caption={Testfunktion},
-%                 label=lst:Matlab]
-%                 {./Matlab/Testfunktion.m}
-%         \end{quote}
+	    
+	    \subsubsection{Frequenzverlauf über der Zeit}
+	    \begin{quote}
+	        \lstinputlisting[
+	            caption={frequenz_imZeitbereich_ausSignal},
+	            label=lst:Matlab]
+	            {./Matlab/frequenz_imZeitbereich_ausSignal.m}
+	    \end{quote}
+
+	    \subsubsection{Frequenzverlauf aus dem Spektrogram}
+	    \begin{quote}
+	        \lstinputlisting[
+	            caption={frequenz_durch_Spektogramm},
+	            label=lst:Matlab]
+	            {./Matlab/frequenz_durch_Spektogramm.m}
+	    \end{quote}
+
+        \subsubsection{Algorithmus zur Drehfrequenzberechnung}
+        \begin{quote}
+            \lstinputlisting[
+                caption={Algorithmus zur Drehfrequenzberechnung},
+                label=lst:Matlab]
+                {./Matlab/Vorbereitungsaufgabe4.m}
+        \end{quote}
 % 	    
 % 	    \subsubsection{DecimFilt.m}
 % 	    \begin{quote}
