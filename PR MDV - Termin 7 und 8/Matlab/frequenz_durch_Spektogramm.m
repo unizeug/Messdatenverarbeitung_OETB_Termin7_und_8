@@ -3,39 +3,33 @@
 function frequenz_durch_Spektogramm(x_t,t)
 
 
-[S,F,T]=spectrogram(x_t,256,250,256,1E3);
+N=length(t);
+fs=N/max(t);
 
-S
+wnsize=256;
+wnoverlap= 250;
+nr_abtastwerte_frequenz= 256;
 
-%disp('length(x_t)');
-%length(x_t)
+[S,F,T]=spectrogram(x_t,wnsize,wnoverlap,nr_abtastwerte_frequenz,fs);
 
-%disp('length(T)');
-%length(T)
+%spectrogram(x_t,wnsize,wnoverlap,nr_abtastwerte_frequenz,fs);
 
-%figure(202);
-%plot(F);
+groesse = size(S);
+maxfrequ = ones(1,groesse(1))*-9;
+maxfrequ_umgerechnet = ones(1,groesse(1))*-9;
+maxindx = ones(1,groesse(1))*-8;
+maxindx_umgerechnet = ones(1,groesse(1))*-8;
 
-%disp('length(F)');
-%length(F)
+for i=1:groesse(2)
+   [maxfrequ(i) maxindx(i)] = max(abs(S(:,i)));
+   maxfrequ_umgerechnet(i) = F(round(maxindx(i)+1));
+   maxindx_umgerechnet(i) = T(round(i));
+end
 
-%disp('length(f2)');
-
-%F2 = F*length(T)/length(F);
-%length(F2)
-
-
-%figure(203);
-%plot(T,F2);
-
-F2 = interp1(F,T,'spline');
-F2 = F2-min(F2);
-F2 = F2 * max(F)/max(F2);
-
-
+maxindx_umgerechnet
 
 figure(204);
-[AX H1 H2] = plotyy(t,x_t,T,F2,'plot','stem');
+[AX H1 H2] = plotyy(t,x_t,maxindx_umgerechnet,maxfrequ_umgerechnet,'plot','stem');
 % AXIS([0 2 -1.1 1.1]);
 xlabel('Zeitachse [s]');
 set(get(AX(1),'Ylabel'),'String','Amplitude [V]');

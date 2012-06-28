@@ -3,10 +3,13 @@
 close all; clc; clear;
 
 t=0:0.001:2;                    % 2 secs @ 1kHz sample rate
-y=chirp(t,0,2,150);              % Start @ DC, cross 150Hz at t=1sec 
+y=chirp(t,0,2,300);              % Start @ DC, cross 150Hz at t=1sec 
 
-figure(101)
-spectrogram(y,256,250,256,1E3); % Display the spectrogram
+N=length(t);
+fs=N/max(t);
+
+%figure(101)
+%spectrogram(y,256,250,256,fs); % Display the spectrogram
 
 
 
@@ -64,6 +67,9 @@ spectrogram(y,256,250,256,1E3); % Display the spectrogram
 %% plotten des Signals im Zeitbereich
 
 %frequenz_im_zeitbereich (y,t);
+
+
+
 frequenz_imZeitbereich_ausSignal(y,t);
 frequenz_durch_Spektogramm(y,t);
 
