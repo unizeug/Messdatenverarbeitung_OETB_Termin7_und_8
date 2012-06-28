@@ -1,6 +1,6 @@
 %MDV Praktikum 7 Vorbereitungsaufgabe 4
 
-function y_DFT_abs = MotorStrom_Amplitudenspektrum (y, T_ges, f_T, A,farbe, fignum)
+function [y_DFT_abs f_DFT] = MotorStrom_Amplitudenspektrum (y, T_ges, f_T, A,farbe, fignum)
 
 % y - Stromvektor
 % T_ges -Dauer des Signals
