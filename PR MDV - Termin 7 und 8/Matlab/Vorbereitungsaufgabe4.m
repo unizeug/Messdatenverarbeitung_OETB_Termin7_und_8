@@ -23,12 +23,10 @@ A3 = 30;
 f_T = 100000;
 T_ges = 1/f_T;
 
-<<<<<<< HEAD
-MotorStrom_Amplitudenspektrum(strom1,T_ges,f_T,10,'b',1)
-% MotorStrom_Amplitudenspektrum(strom2,T_ges,f_T,10,'b',2)
-% MotorStrom_Amplitudenspektrum(strom1,T_ges,f_T,10,'b',3)
-=======
-MotorStrom_Amplitudenspektrum(strom1,T_ges,f_T,10,'b',1);
-MotorStrom_Amplitudenspektrum(strom2,T_ges,f_T,10,'b',2);
-MotorStrom_Amplitudenspektrum(strom1,T_ges,f_T,10,'b',3);
->>>>>>> branch 'master' of https://github.com/unizeug/Messdatenverarbeitung_OETB_Termin7_und_8.git
+MotorStrom_Amplitudenspektrum(strom1,T_ges,f_T,A1,'b',1)
+MotorStrom_Amplitudenspektrum(strom2,T_ges,f_T,A2,'b',2)
+MotorStrom_Amplitudenspektrum(strom3,T_ges,f_T,A3,'b',3)
+
+% MotorStrom_Amplitudenspektrum(strom1,T_ges,f_T,10,'b',1)
+% MotorStrom_Amplitudenspektrum(strom2,T_ges,f_T,10,'b',2);
+% MotorStrom_Amplitudenspektrum(strom1,T_ges,f_T,10,'b',3);
