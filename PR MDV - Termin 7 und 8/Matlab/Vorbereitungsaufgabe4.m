@@ -44,11 +44,11 @@ Drehzahl_Motor_30V_strom = abs(f_DFT_30V_strom(maxind30_strom))/18
 [maxwert20_tacho maxind20_tacho] = max(y_DFT_abs_20V_tacho);
 [maxwert30_tacho maxind30_tacho] = max(y_DFT_abs_30V_tacho);
 
-Drehzahl_Motor_10V_tacho = abs(f_DFT_10V_tacho(maxind10_tacho))/(18*4)
-Drehzahl_Motor_20V_tacho = abs(f_DFT_20V_tacho(maxind20_tacho))/(18*4)
-Drehzahl_Motor_30V_tacho = abs(f_DFT_30V_tacho(maxind30_tacho))/(18*4)
+Drehzahl_Motor_10V_tacho = abs(f_DFT_10V_tacho(maxind10_tacho))/8
+Drehzahl_Motor_20V_tacho = abs(f_DFT_20V_tacho(maxind20_tacho))/8
+Drehzahl_Motor_30V_tacho = abs(f_DFT_30V_tacho(maxind30_tacho))/8
 
-Drehzahl_Motor_10V_tacho/Drehzahl_Motor_10V_strom
-Drehzahl_Motor_20V_tacho/Drehzahl_Motor_20V_strom
-Drehzahl_Motor_30V_tacho/Drehzahl_Motor_30V_strom
+Drehzahl_Motor_10V_tacho/Drehzahl_Motor_10V_strom;
+Drehzahl_Motor_20V_tacho/Drehzahl_Motor_20V_strom;
+Drehzahl_Motor_30V_tacho/Drehzahl_Motor_30V_strom;
 
