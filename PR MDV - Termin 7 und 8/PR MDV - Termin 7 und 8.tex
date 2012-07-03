@@ -285,6 +285,9 @@
 	    $2.1389 Hz$, für die zweite Messung ($20V$) = $6.3056 Hz$ und für die
 	    dritte Messung ($30V$) = $10.4723 Hz$.\\
 	    
+	    \TODO{Hier sind die Werte falsch, weil wir die falschen Paeks rausgesucht
+	    haben, Fehler muss noch korrigiert werden}
+	    
 	    Außerdem wurden die Drehfrequenzen auch aus den jeweiligen Tachosignalen
 	    bestimmt. Dafür wurde genauso vogegangen wie bei den Motorströmen. Die
 	    Spektren sind hier:
@@ -332,8 +335,8 @@
                \end{figure}
                
         Die anhand der Tachosignale berechneten Drehfrequenzen betragen für die
-        erste Messung ($10V$) = $8.6945 Hz$, für die zweite Messung ($20V$) =
-        $25.2503 Hz$ und für die dritte Messung ($30V$) = $41.9171 Hz$.\\
+        erste Messung ($10V$) = $19.5627 Hz$, für die zweite Messung ($20V$) =
+        $56.8131 Hz$ und für die dritte Messung ($30V$) = $94.3134 Hz$.\\
 	    Es fällt auf, dass die Drehzahlen, welche über die Ströme berechnet werden,
 	    ca. 4mal kleiner sind als die Drehzahlen über die Tachowerte. Ein
 	    konstanter Faktor von 4 kann angenommen werden.
@@ -344,26 +347,86 @@
 	    
 	\end{quote}
 	
-   %\subsection{Vorbereitungsaufgaben zu Termin 8}
-    %\begin{quote}
- 
-	%\end{quote}%Ende Vorbereitungsaufgaben zu Termin 8	
+    \subsection{Vorbereitungsaufgaben zu Termin 8}
+    \begin{quote}
+    
+        \subsubsection{Zerlegung des Signals mittels Haar-Tranformation}
+        \begin{quote}
+        
+        In der ersten Vorbereitungsaufgabe des 8.Praktikumstermins wird eine
+        vorgegebene strom.m Datei verwendet, welche einen angechnittenen Sinus
+        im Bereich $[0,8\pi]$ darstellt. Dieses Signal wird mit der Schnellen
+        Haar-Transformation zerlegt. Außerdem wird die Approximation und die
+        Details dür die Skalierungen $m = 1 \ldots 5$ berechnet werden, wofür
+        die drei Funktionen haardec.m, haardeclevel.m und getAppDet.m
+        implementiert werden. Diese stehen unter den Codes.
+        
+        \end{quote}%ende Zerlegung des Signals mittels Haar-Transformation
+        
+        
+        \subsubsection{Darstellung der Approximationen}
+        \begin{quote}
+        
+        Als nächstes werden die Approximationen und die Details des
+        angeschnittenen Sinus-Signals dargestellt und das stationäre Spektrum
+        sowie das Spektrogramm berechnet. Diese spektralen Darstellungen werden
+        mit den Darstellungen mittels Wavelets verglichen. Am Ende soll
+        ermittelt werden, welche Darstellung bestimmte Informationen über das
+        verwendete Signal besser veranschaulicht.
+        
+        \TODO{entsprechende Ergebnisse einfügen}
+        
+        \end{quote}%ende Darstellung der Approximationen
+        
+        
+        \subsubsection{Daubechies-Wavelets}
+        \begin{quote}
+        
+        Nun wird das angeschnitte Sinus-Signal mit Hilfe von Daubechies-Wavelets
+        zerlegt. Dazu verwenden wir die Matlab-Fuktionen wavedec, appcoef
+        und detcoaf und variieren die Anzahl der verschwindenen
+        Momente der Wavelets.
+        
+        \TODO{Ergebnisse einfügen}
+        
+        \end{quote}%ende Daubechies-Wavelets
+        
+        
+        \subsubsection{Vergleich der Zerlegungen mittels
+        Daubechies-Wavelets und Haar-Wavelets}
+        \begin{quote}
+        
+        Zuletzt wird in der Vorbereitung des Praktikums die Zerlegungen mittels
+        Daubechies-Wavelets mit den Zerlegungen mittels Haar-Wavelets
+        verglichen. Die Unterschiede sind folgende:
+        
+        \TODO{Unterschiede untersuchen und einfügen}
+       
+        \end{quote}%ende Vergleich der Zerlegungen mittels
+        %Daubechies-Wavelets und Haar-Wavelets
+    
+    \end{quote}%Ende Vorbereitungsaufgaben zu Termin 8
+
 \end{quote}%Ende Vorbereitungsaufgaben
 
-% \section{Durchführungen}
-% \begin{quote}
-% 		
-% 		\subsection{Durchführung zu Termin 7}
-% 		\begin{quote}
-% 			
-% 		\end{quote}%Ende der Durchführung von Termin 7
-% 		
-% 		\subsection{Durchführung zu Termin 8}
-% 		\begin{quote}
-% 		
-% 		\end{quote}%Ende der Durchführungen von Termin 8
-% 		
-% \end{quote}%Ende Durchführungen
+\section{Durchführungen}
+\begin{quote}
+
+		\subsection{Durchführung zu Termin 7}
+		\begin{quote}
+            
+            
+            
+		\end{quote}%Ende der Durchführung von Termin 7
+
+		\subsection{Durchführung zu Termin 8}
+		\begin{quote}
+            
+            
+            
+		\end{quote}%Ende der Durchführungen von Termin 8
+
+\end{quote}%Ende Durchführungen
 
 
 %--------------------------------------------------------------------
