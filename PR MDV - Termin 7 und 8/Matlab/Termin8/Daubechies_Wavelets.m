@@ -24,4 +24,5 @@ approx = appcoef(C,L,'db1',N);
 %braucht keine Wavelet-Vorgabe mehr, nur Ergebnisse aus wavedec
 details = detcoef(C,L,N);
 
-%Wie kann an die Anzahl der verschwindenden Momente im Wavelet variieren?
+%Wie kann an die Anzahl der verschwindenden Momente im Wavelet variieren?+
+%entweder über db1, db4 und db15 oder über die Ordnung N
