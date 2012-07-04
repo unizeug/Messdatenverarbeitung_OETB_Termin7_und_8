@@ -23,11 +23,11 @@ u_g = x(2:2:n);              %gerade Komponenten des Signals
 u = (u_u + u_g)/sqrt(2);     %Approximationen
 v = (u_u - u_g)/sqrt(2);     %Details
 
-% plot(x)
-% hold on
-% plot(u, 'r')
-% hold on
-% plot(v, 'g')
-% hold off
+plot(x)
+hold on
+plot(u, 'r')
+hold on
+plot(v, 'g')
+hold off
 
 end

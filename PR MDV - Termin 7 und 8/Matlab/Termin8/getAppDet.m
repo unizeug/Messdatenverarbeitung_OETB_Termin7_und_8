@@ -10,15 +10,19 @@ function [u, v] = getAppDet(S,lvl)
 %               v - Details
 % Bemerkung :   Jede Zeile in S enthält die Approximationen gefolgt von den
 %               Details eines Levels
-%               Skalierungslevel ist eine Potenz von zwei = ganzzahlig
+%               Skalierungslevel ist eine Potenz von zwei = ganzzahlig >0
 
 m = length(S(lvl,:));       %gibt Länge der lvl. Zeile wieder
 
-u = S(lvl,(1:m/2));         %1.Hälfte der Einträge = u
-v = S(lvl,((m/2)+1:m));     %2.Hälfte der Einträge = v 
 
-disp(['Approximationen u im gewählten Level ',num2str(lvl)  ' : ',num2str(u)]);
-disp(['Details v im gewählten Level ',num2str(lvl) ' : ',num2str(v)]);
+    u = S((lvl+1) , (1:m/(2^lvl)));
+    v = S((lvl+1) , (m/(2^lvl))+1:m)                  %Details aus der gesamten Zeile
+%   v = S((lvl+1) , ((m/(2^lvl))+1):(m/(2^lvl))*2)    %Details zur App aus
+%                                                      der Zeile
+
+    
+% disp(['Approximationen u im gewählten Level ',num2str(lvl)  ' : ',num2str(u)]);
+% disp(['Details v im gewählten Level ',num2str(lvl) ' : ',num2str(v)]);
 
 end
 

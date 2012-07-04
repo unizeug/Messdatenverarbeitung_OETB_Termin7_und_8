@@ -13,12 +13,15 @@ function [S] = haardeclevel(x, lvl)
 %               Details eines Levels
 %               Skalierungslevel ist eine Potenz von zwei = ganzzahlig
 
-n = length(x);
-S = ones(lvl+1, n);              %Hat lvl+1 Zeilen und n Spalten
+n1 = length(x);
+S = ones(lvl+1, n1)*-4;          %Hat lvl+1 Zeilen und n Spalten
+u = x;
 
-i = 1;
-for i:1:lvl
-    [u, v] = haardec(x);
-    S(i) = [haardeclevel(u), v]
+S(1,:) = x;                     %erste Zeile ist das Originalsignal     
+
+for i=2:(lvl+1)
+    [u, v] = haardec(u)
+    n2 = length(u);
+    S(lvl,:) = [u, v, S(i-1,((2*n2)+1):n1)];
 end
 
