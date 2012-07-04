@@ -16,9 +16,9 @@ m = length(S(lvl,:));       %gibt Länge der lvl. Zeile wieder
 
 
     u = S((lvl+1) , (1:m/(2^lvl)));
-    v = S((lvl+1) , (m/(2^lvl))+1:m)                  %Details aus der gesamten Zeile
-%   v = S((lvl+1) , ((m/(2^lvl))+1):(m/(2^lvl))*2)    %Details zur App aus
-%                                                      der Zeile
+    v = S((lvl+1) , ((m/(2^lvl))+1):(m/(2^lvl))*2);   
+    
+%   v = S((lvl+1) , (m/(2^lvl))+1:m)                  %Details aus der gesamten Zeile                                                      der Zeile
 
     
 % disp(['Approximationen u im gewählten Level ',num2str(lvl)  ' : ',num2str(u)]);
