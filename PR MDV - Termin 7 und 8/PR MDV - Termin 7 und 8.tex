@@ -10,7 +10,7 @@
 \newcommand{\gruppe}{Gruppe: G1 Fr 08-10}
 \newcommand{\betreuer}{Betreuer: J\"urgen Funk}
 
-\input{../../packages/tu_header_8}
+\input{../../packages/tu_header_9}
 \begin{document}
 
 % \lstlistoflistings
@@ -20,39 +20,42 @@
 \definecolor{variableRed}{rgb}{1,0,0}
 \definecolor{stringBrown}{HTML}{bc8e8e} % f geht nicht
 
-\lstset{
-        %\lstset{extendedchars=true} % Umlaute an der richtigen stelle und nicht am Anfang ausgeben
-        %basicstyle=\footnotesize\ttfamily,
-        basicstyle=\small,
-        %
-        inputencoding=utf8,
-        %
-        tabsize=4,
-        showspaces=false,
-        showtabs=false,
-        showstringspaces=true, % no special string spaces
-        %
-        backgroundcolor=\color{darkgray}, % background
-        stringstyle=\color{stringBrown}\fseries, % Strings
-        keywordstyle=\color{functionsBlue}\bfseries, % keywords Blau
-        identifierstyle=\color{variableRed}, % variablen
-        commentstyle=\color{darkolivegreen}, %  comments
-        %
-        breaklines=true,
-        %
-        numbers=left,
-        numberstyle=\tiny,
-        stepnumber=1,
-        numbersep=7pt,
-        %
-        frame=single,
-        columns=flexible,
-        %
-        xleftmargin=-2cm,
-        xrightmargin=-1.5cm,
-        %
-        language=Matlab
-}
+
+
+% \lstset{
+%         %\lstset{extendedchars=true} % Umlaute an der richtigen stelle und nicht am Anfang ausgeben
+%         %basicstyle=\footnotesize\ttfamily,
+%         basicstyle=\small,
+%         %
+%         inputencoding=utf8,
+%         %
+%         tabsize=4,
+%         showspaces=false,
+%         showtabs=false,
+%         showstringspaces=true, % no special string spaces
+%         %
+%         backgroundcolor=\color{darkgray}, % background
+%         stringstyle=\color{stringBrown}\fseries, % Strings
+%         keywordstyle=\color{functionsBlue}\bfseries, % keywords Blau
+%         identifierstyle=\color{variableRed}, % variablen
+%         commentstyle=\color{darkolivegreen}, %  comments
+%         %
+%         breaklines=true,
+%         %
+%         numbers=left,
+%         numberstyle=\tiny,
+%         stepnumber=1,
+%         numbersep=7pt,
+%         %
+%         frame=single,
+%         columns=flexible,
+%         %
+%         xleftmargin=-2cm,
+%         xrightmargin=-1.5cm,
+%         %
+%         language=Matlab
+% }
+
 
 
 %---------------------------------------------------------------------
@@ -460,7 +463,7 @@
 	    \subsubsection{Frequenzverlauf über der Zeit}
 	    \begin{quote}
 	        \lstinputlisting[
-	            caption={frequenz_imZeitbereich_ausSignal},
+	            caption={frequenz imZeitbereich ausSignal},
 	            label=lst:Matlab]
 	            {./Matlab/Termin7/frequenz_imZeitbereich_ausSignal.m}
 	    \end{quote}
@@ -468,7 +471,7 @@
 	    \subsubsection{Frequenzverlauf aus dem Spektrogram}
 	    \begin{quote}
 	        \lstinputlisting[
-	            caption={frequenz_durch_Spektogramm},
+	            caption={frequenz durch Spektogramm},
 	            label=lst:Matlab]
 	            {./Matlab/Termin7/frequenz_durch_Spektogramm.m}
 	    \end{quote}
@@ -505,7 +508,7 @@
 	   \subsubsection{Funktion getAppDet.m}
 	   \begin{quote}
 	   \lstinputlisting[
-                caption={Fuktion getAppDet.m},
+                caption={Funktion getAppDet.m},
                 label=lst:Matlab]
                 {./Matlab/Termin8/getAppDet_8_1_3.m}
 	   \end{quote}
