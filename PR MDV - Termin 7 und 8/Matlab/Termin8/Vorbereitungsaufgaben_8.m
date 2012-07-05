@@ -65,6 +65,9 @@ for lvl=1:5
         plot(v2,'c')
     hold off
     title(['\bf Haar Wavlet Stufe',num2str(lvl)]);
+    xlabel('Zeit [s]');
+    ylabel('Amplitude [A]');
+    legend('Originalsignal','Approximation','Details');
 
     if Bilder_abspeichern == 1
          figure(fignum);
@@ -82,7 +85,10 @@ for lvl=1:5
         plot(ud2,'r')
         plot(vd2,'c')
     hold off
-
+    xlabel('Zeit [s]');
+    ylabel('Amplitude [A]');
+    legend('Originalsignal','Approximation','Details');
+    
     title(['\bf Daubechies Wavlet Stufe ',num2str(lvl)]);
     
     if Bilder_abspeichern == 1
@@ -101,7 +107,11 @@ for lvl=1:5
         plot(ud21,'r')
         plot(vd21,'c')
     hold off
+    xlabel('Zeit [s]');
+    ylabel('Amplitude [A]');
+    legend('Originalsignal','Approximation','Details');
 
+    
     title(['\bf Daubechies Wavlet 1dB Stufe ',num2str(lvl)]);
     
     if Bilder_abspeichern == 1
@@ -120,9 +130,11 @@ for lvl=1:5
         plot(ud25,'r')
         plot(vd25,'c')
     hold off
-
     title(['\bf Daubechies Wavlet 5dB Stufe ',num2str(lvl)]);
-    
+    xlabel('Zeit [s]');
+    ylabel('Amplitude [A]');
+    legend('Originalsignal','Approximation','Details');
+        
     if Bilder_abspeichern == 1
          figure(fignum);
          name=['../../Bilder/Termin8/Daubechies_Wavlet_5db_lvl_',num2str(lvl),'.pdf'];
@@ -139,6 +151,10 @@ for lvl=1:5
         plot(ud210,'r')
         plot(vd210,'c')
     hold off
+
+    xlabel('Zeit [s]');
+    ylabel('Amplitude [A]');
+    legend('Originalsignal','Approximation','Details');
 
     title(['\bf Daubechies Wavlet 10dB Stufe ',num2str(lvl)]);
     
@@ -159,6 +175,12 @@ for lvl=1:5
         plot(vd215,'c')
     hold off
 
+    xlabel('Zeit [s]');
+    ylabel('Amplitude [A]');
+    legend('Originalsignal','Approximation','Details');
+
+    
+    
     title(['\bf Daubechies Wavlet 15dB Stufe ',num2str(lvl)]);
     
     if Bilder_abspeichern == 1
