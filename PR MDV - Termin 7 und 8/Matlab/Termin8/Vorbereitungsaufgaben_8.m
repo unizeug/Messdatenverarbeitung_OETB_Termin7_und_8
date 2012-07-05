@@ -12,7 +12,7 @@ fignum=801;
 for lvl=1:5
     [u v] = getAppDet_8_1_3(S, lvl);
     
-    [ud vd] = Daubechies_Wavelets(x,lvl);
+    [ud vd] = Daubechies_Wavelets(x,lvl,'db3');
     
     N=length(u);
     u2=ones(1,N*2^lvl);

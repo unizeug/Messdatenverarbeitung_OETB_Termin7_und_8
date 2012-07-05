@@ -3,9 +3,8 @@
 %Bemerkung: Anzahl der verschwindenden Momenten variierbar durch
 %db1,db4,db15
 
-close all; clc, clear;
 
-function [approx details] = Daubechies_Wavelets(x,lvl)
+function [approx details] = Daubechies_Wavelets(x,lvl, db)
 
 %Skalierungslevel variabel
 N = lvl;
@@ -15,20 +14,13 @@ N = lvl;
 % L(1)   = length of app. coef.(N)
 % L(i)   = length of det. coef.(N-i+2) for i = 2,...,N+1
 % L(N+2) = length(X)
-[C,L] = wavedec(x,N,'db1');
+[C,L] = wavedec(x,N,db);
 
 %mittel appcoef: Berechnung der App.Koeffizienten in Level N
 %gibt Vektor approx der L�nge L(1) mit den Koeffizienten aus
-approx = appcoef(C,L,'db1',N);
+approx = appcoef(C,L,db,N);
 
 %mittels detcoef: Berechnung der Det.Koefizienten in Level N
 %gibt Vektor details der L�nge L(1) mit den Koeffizienten aus
 %braucht keine Wavelet-Vorgabe mehr, nur Ergebnisse aus wavedec
 details = detcoef(C,L,N);
-
-% plot(x)
-% hold on
-% plot(approx, 'r')
-% hold on 
-% plot(details, 'g')
-% hold off
