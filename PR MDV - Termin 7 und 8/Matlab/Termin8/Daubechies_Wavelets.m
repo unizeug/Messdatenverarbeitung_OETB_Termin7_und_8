@@ -5,12 +5,10 @@
 
 close all; clc, clear;
 
-%Signal laden
-x = load('strom.mat');
-x = x.x;
+function [approx details] = Daubechies_Wavelets(x,lvl)
 
-%Skalierungslevel variabel, hier 5
-N = 4;
+%Skalierungslevel variabel
+N = lvl;
 
 %mittels wavedec: Daubechies-Wavelet ('db1'-wavename) 
 % C      = [app. coef.(N)|det. coef.(N)|... |det. coef.(1)]
@@ -20,11 +18,11 @@ N = 4;
 [C,L] = wavedec(x,N,'db1');
 
 %mittel appcoef: Berechnung der App.Koeffizienten in Level N
-%gibt Vektor approx der Länge L(1) mit den Koeffizienten aus
+%gibt Vektor approx der Lï¿½nge L(1) mit den Koeffizienten aus
 approx = appcoef(C,L,'db1',N);
 
 %mittels detcoef: Berechnung der Det.Koefizienten in Level N
-%gibt Vektor details der Länge L(1) mit den Koeffizienten aus
+%gibt Vektor details der Lï¿½nge L(1) mit den Koeffizienten aus
 %braucht keine Wavelet-Vorgabe mehr, nur Ergebnisse aus wavedec
 details = detcoef(C,L,N);
 
