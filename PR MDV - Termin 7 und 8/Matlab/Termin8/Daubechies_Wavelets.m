@@ -3,12 +3,14 @@
 %Bemerkung: Anzahl der verschwindenden Momenten variierbar durch
 %db1,db4,db15
 
+close all; clc, clear;
+
 %Signal laden
 x = load('strom.mat');
 x = x.x;
 
 %Skalierungslevel variabel, hier 5
-N = 5;
+N = 4;
 
 %mittels wavedec: Daubechies-Wavelet ('db1'-wavename) 
 % C      = [app. coef.(N)|det. coef.(N)|... |det. coef.(1)]
@@ -26,3 +28,9 @@ approx = appcoef(C,L,'db1',N);
 %braucht keine Wavelet-Vorgabe mehr, nur Ergebnisse aus wavedec
 details = detcoef(C,L,N);
 
+% plot(x)
+% hold on
+% plot(approx, 'r')
+% hold on 
+% plot(details, 'g')
+% hold off
