@@ -10,9 +10,9 @@ function [u,v] = haardec_8_1_1(x)
 % ---------------------------------------------------
 % description :     führt einen Zerlegungsschritt
 %                   der schnellen Haartransformation durch
-% input :           x ? zu zerlegendes Signal
-% output :          u ? Approximationen
-%                   v ? Details
+% input :           x - zu zerlegendes Signal
+% output :          u - Approximationen
+%                   v - Details
 % ---------------------------------------------------
 
 N = length(x);
@@ -24,10 +24,5 @@ for i=1:N/2
    v(i) = (x(j)-x(j+1))/sqrt(2);
    j=j+2;
 end
-
-% u
-% length(u)
-% v
-% length(v)
 
 

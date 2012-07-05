@@ -36,4 +36,4 @@ end
 wn = ones(1,length(x));
 fs = 1;
 % Achtung funktioniert noch nicht wirklich
-Spektrum(x, wn, fs, 1,'b',-10,10,-100,30, fignum)
+% Spektrum(x, wn, fs, 1,'b',-0.6,0.6,-100,30, fignum);
