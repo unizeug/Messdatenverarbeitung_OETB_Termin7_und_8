@@ -406,7 +406,14 @@
         Die Darstellungen der Approximationen und der Details für fünf
         Skalierungslevel sind dabei in der vierten Aufgabe der Vorbereitung
         dargestellt, wo sie auch zeitgleich mit den Zerlegungen des
-        Daubechies-Wavelets (db3) verglichen werden.
+        Daubechies-Wavelets (db3) verglichen werden. Da eine Zerlegung mittels
+        Wavelets eine Tief- und Hochpassfilterung darstellt, kann man es so
+        interpretieren, dass die gefilterten tiefen Frequenzen als
+        Approximationen und die gefilterten hohen Frequenzen als Details
+        abgespeichert werden. Je öfter eine Zerlegung stattfindet, desto öfter
+        wird die Approximation hoch- und tiefpassgefiltert, wodurch am Ende in
+        dem Approximationsvektor nur noch die aller tiefsten Frequenzen
+        enthalten sind.
 
 
         \end{quote}%ende Darstellung der Approximationen
@@ -420,9 +427,7 @@
         Momente der Wavelets, indem wir bei der wavedec.m Ausführung die
         Wavelets db1, db5, db10 und db15 wählen. Damit werden die
         verschwindenden Momente in jedem Wavelet $1$, $5$, $10$ und $15$
-        betragen. Es werden nur die Zerlegungen in Level 2 angezeigt, die blaue
-        Kurve zeigt den Nutzsignal, die rote Kurve die Approximationen und die
-        türkis farbene Kurve die Details der Zerlegung.
+        betragen. Es werden nur die Zerlegungen in Level 2 angezeigt.
         
          
         \begin{center}
