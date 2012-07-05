@@ -397,8 +397,8 @@
                     \end{figure} 
         \end{quote}%ende Darstellung der Approximationen
         
-<<<<<<< HEAD
-        
+
+
         Außerdem kann man im Spektrogram des Signals die durch die Anschneidung
         entstandenen Flanken erkennen. Dies macht sich in dem zeitlich periodischen
         Farbverlauf des Spektrograms deutlich sichtbar.\\
@@ -407,9 +407,8 @@
         Skalierungslevel sind dabei in der vierten Aufgabe der Vorbereitung
         dargestellt, wo sie auch zeitgleich mit den Zerlegungen des
         Daubechies-Wavelets (db3) verglichen werden.
-=======
->>>>>>> refs/heads/master
-        
+
+
         \end{quote}%ende Darstellung der Approximationen
         
         \subsubsection{Daubechies-Wavelets}
@@ -421,7 +420,9 @@
         Momente der Wavelets, indem wir bei der wavedec.m Ausführung die
         Wavelets db1, db5, db10 und db15 wählen. Damit werden die
         verschwindenden Momente in jedem Wavelet $1$, $5$, $10$ und $15$
-        betragen.
+        betragen. Es werden nur die Zerlegungen in Level 2 angezeigt, die blaue
+        Kurve zeigt den Nutzsignal, die rote Kurve die Approximationen und die
+        türkis farbene Kurve die Details der Zerlegung.
         
          
         \begin{center}
@@ -434,7 +435,7 @@
                             \label{fig:}
                             \includegraphics[scale=0.45, trim = 0.8cm 6cm 3cm
                             7.5cm,
-                            clip]{./Bilder/Termin8/Daubechies_Wavlet_\ldots}
+                            clip]{./Bilder/Termin8/Daubechies_Wavlet_1db_lvl_2}
                             %FIXME [width=640px,
                              %height=474px]
                             \caption{Daubechies-Wavelet mit 1 vanishing moment}
@@ -447,7 +448,7 @@
                             \label{fig:}
                             \includegraphics[scale=0.45, trim = 0.8cm 6cm 3cm
                             7.5cm,
-                            clip]{./Bilder/Termin8/Daubechies_Wavlet_\ldots}
+                            clip]{./Bilder/Termin8/Daubechies_Wavlet_5db_lvl_2}
                             %FIXME [width=640px,
                              %height=474px]
                             \caption{Daubechies-Wavelet mit 5 vanishing moment}
@@ -471,7 +472,7 @@
                             \label{fig:}
                             \includegraphics[scale=0.45, trim = 0.8cm 6cm 3cm
                             7.5cm,
-                            clip]{./Bilder/Termin8/Daubechies_Wavlet_\ldots}
+                            clip]{./Bilder/Termin8/Daubechies_Wavlet_10db_lvl_2}
                             %FIXME [width=640px,
                              %height=474px]
                             \caption{Daubechies-Wavelet mit 10 vanishing moment}
@@ -484,7 +485,7 @@
                             \label{fig:}
                             \includegraphics[scale=0.45, trim = 0.8cm 6cm 3cm
                             7.5cm,
-                            clip]{./Bilder/Termin8/Daubechies_Wavlet_\ldots}
+                            clip]{./Bilder/Termin8/Daubechies_Wavlet_15db_lvl_2}
                             %FIXME [width=640px,
                              %height=474px]
                             \caption{Daubechies-Wavelet mit 15 vanishing moment}
@@ -500,7 +501,19 @@
                 
                 
             Man kann sehen, dass sich die Zerlegungen deutlich voneinander
-            unterscheiden, \ldots 
+            unterscheiden. Gehen wir zunächst auf die Approximationen ein. Es
+            ist deutlich, dass es bei der ersten Darstellung mit nur einem
+            verschwindenden Moment kaum einen Unterschied zu einer
+            Haar-Wavelet Zerlegung gibt, wohingegen es bei der Zerlegung mit
+            fünf verschwindenen Momenten der Verlauf der Approximationen sich
+            ein wenig verändert. Wird die Anzahl der verschwindenen Momente auf
+            zehn verdoppelt, so wird der Verlauf noch unkontinuierlicher und
+            einzelne Amplituden fangen an zu schwanken. Bei fünfzehn bestätigt
+            sich diese Beobachtung sogar verstärkter.\\
+            Sieht man sich die Details der Zerlegungen an, entdeckt man
+            ebenfalls eine Veränderung. Ähnlich wie bei den Approximationen wird
+            der kontinuierliche Verlauf mit steigender Anzahl an verschwindenen
+            Momenten gestört und die Amplituden variieren und verkleinern sich.
                 
                 
         \end{quote}%ende Daubechies-Wavelets
