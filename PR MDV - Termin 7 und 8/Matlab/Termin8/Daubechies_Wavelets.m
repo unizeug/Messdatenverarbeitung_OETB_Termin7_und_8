@@ -3,12 +3,14 @@
 %Bemerkung: Anzahl der verschwindenden Momenten variierbar durch
 %db1,db4,db15
 
+function [approx details] = Daubechies_Wavelets(x,lvl)
+
 %Signal laden
-x = load('strom.mat');
-x = x.x;
+% x = load('strom.mat');
+% x = x.x;
 
 %Skalierungslevel variabel, hier 5
-N = 5;
+N = lvl;
 
 %mittels wavedec: Daubechies-Wavelet ('db1'-wavename) 
 % C      = [app. coef.(N)|det. coef.(N)|... |det. coef.(1)]
