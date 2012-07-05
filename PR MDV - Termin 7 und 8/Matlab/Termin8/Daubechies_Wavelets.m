@@ -5,10 +5,6 @@
 
 function [approx details] = Daubechies_Wavelets(x,lvl)
 
-%Signal laden
-% x = load('strom.mat');
-% x = x.x;
-
 %Skalierungslevel variabel, hier 5
 N = lvl;
 

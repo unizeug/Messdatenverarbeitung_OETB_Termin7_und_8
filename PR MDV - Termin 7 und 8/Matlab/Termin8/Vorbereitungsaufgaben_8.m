@@ -4,7 +4,7 @@ close all; clc, clear;
 
 load('strom');
 
-Bilder_abspeichern = 0;
+Bilder_abspeichern = 1;
 
 S = haardeclevel_8_1_2(x,5);
 
@@ -72,8 +72,20 @@ end
 wn = ones(1,length(x));
 fs = 1;
 
-% Spektrum(x, wn, fs, 1,'b',-0.6,0.6,-100,30, fignum);
+Spektrum(x, wn, fs, 1,'b',-0.6,0.6,-100,30, fignum);
 
-% fignum=fignum+1;
-% figure(fignum);
-% spectrogram(x,25,24)
+    if Bilder_abspeichern == 1
+         figure(fignum);
+         name=['../../Bilder/Termin8/Spektrum.pdf'];
+         print('-painters','-dpdf','-r600',name)
+    end
+
+fignum=fignum+1;
+figure(fignum);
+spectrogram(x,25,24)
+
+    if Bilder_abspeichern == 1
+         figure(fignum);
+         name=['../../Bilder/Termin8/Spectrogam.pdf'];
+         print('-painters','-dpdf','-r600',name)
+    end
