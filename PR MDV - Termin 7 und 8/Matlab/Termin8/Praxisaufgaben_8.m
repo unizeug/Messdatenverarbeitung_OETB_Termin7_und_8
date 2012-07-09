@@ -2,16 +2,32 @@
 
 close all; clc, clear;
 
-load('daten_fehlerfrei_2mA');
+datensatz=3;
 
-x = daten_fehlerfrei;
+if datensatz==1
+    load('daten_fehlerfrei_2mA');
+    x = daten_fehlerfrei;
+end
+if datensatz==2
+    load('daten_Lamellenfehler_20mA');
+    x = daten_Lamellenfehler;
+end
+if datensatz == 3
+    load('daten_fehlerfrei_hochlaufen_acdc_100mA');
+    x = daten_fehlerfrei_hochlaufen_acdc_100mA;
+end
 
-Bilder_abspeichern = 0;
 
-S = haardeclevel_8_1_2(x,5);
+disp(length(x));
+
+lastlvl = 5;
+
+Bilder_abspeichern = 1;
+
+S = haardeclevel_8_1_2(x,lastlvl);
 
 fignum=801;
-for lvl=1:5
+for lvl=1:lastlvl
     %% errechnen der Approximation und Details des jeweiligen Levels
     [u v] = getAppDet_8_1_3(S, lvl);
     
@@ -52,7 +68,15 @@ for lvl=1:5
 
     if Bilder_abspeichern == 1
          figure(fignum);
-         name=['../../Bilder/Termin8/fehlerfrei_gesaettigt_Haar_Wavlet_lvl_',num2str(lvl),'.pdf'];
+         if datensatz == 1   
+            name=['../../Bilder/Termin8/fehlerfrei_gesaettigt_Haar_Wavlet_lvl_',num2str(lvl),'.pdf'];
+         end
+         if datensatz == 2
+             name=['../../Bilder/Termin8/lamellenfehler_gesaettigt_Haar_Wavlet_lvl_',num2str(lvl),'.pdf'];
+         end
+         if datensatz == 3
+             name=['../../Bilder/Termin8/fehlerfrei_hochlaufen_Haar_Wavlet_lvl_',num2str(lvl),'.pdf'];
+         end
          print('-painters','-dpdf','-r600',name)
     end
 
@@ -73,8 +97,17 @@ for lvl=1:5
     title(['\bf (gesättigt, fehlerfrei) Daubechies Wavlet Stufe ',num2str(lvl)]);
     
     if Bilder_abspeichern == 1
-         figure(fignum);
-         name=['../../Bilder/Termin8/fehlerfrei_gesaettigt_Daubechies_Wavlet_lvl_',num2str(lvl),'.pdf'];
+        figure(fignum);
+         if datensatz == 1   
+            name=['../../Bilder/Termin8/fehlerfrei_gesaettigt_Daubechies_Wavlet_lvl_',num2str(lvl),'.pdf'];
+         end
+         if datensatz == 2
+             name=['../../Bilder/Termin8/lamellenfehler_gesaettigt_Daubechies_Wavlet_lvl_',num2str(lvl),'.pdf'];
+         end
+         if datensatz == 3
+             name=['../../Bilder/Termin8/fehlerfrei_hochlaufen_Daubechies_Wavlet_lvl_',num2str(lvl),'.pdf'];
+         end
+         
          print('-painters','-dpdf','-r600',name)
     end
     
@@ -86,20 +119,38 @@ end
 wn = ones(1,length(x));
 fs = 1;
 
-Spektrum(x, wn, fs, 1,'b',-0.6,0.6,-100,30, fignum);
+
+Spektrum(x, wn', fs, 1,'b',-0.6,0.6,-100,30, fignum);
 
     if Bilder_abspeichern == 1
          figure(fignum);
-         name=['../../Bilder/Termin8/Spektrum.pdf'];
+         if datensatz == 1
+            name=['../../Bilder/Termin8/fehlerfrei_gesaettig_Spektrum.pdf'];
+         end
+         if datensatz == 2
+             name=['../../Bilder/Termin8/lamellenfehler_gesaettig_Spektrum.pdf'];
+         end
+         if datensatz == 3
+             name=['../../Bilder/Termin8/fehlerfrei_hochlaufen_Spektrum.pdf'];
+         end
          print('-painters','-dpdf','-r600',name)
     end
 
 fignum=fignum+1;
 figure(fignum);
-spectrogram(x,25,24)
+spectrogram(x,512,255)
 
     if Bilder_abspeichern == 1
-         figure(fignum);
-         name=['../../Bilder/Termin8/Spectrogam.pdf'];
-         print('-painters','-dpdf','-r600',name)
+         figure(812);
+         
+         if datensatz == 1
+            name=['../../Bilder/Termin8/fehlerfrei_gesaettigt_Spectrogam.pdf'];
+         end
+         if datensatz == 2
+             name=['../../Bilder/Termin8/lamellenfehler_gesaettigt_Spectrogam.pdf'];
+         end
+         if datensatz == 3
+             name=['../../Bilder/Termin8/fehlerfrei_hochlaufen_Spectrogam.pdf'];
+         end
+         print('-painters','-dpdf','-r200',name)
     end
