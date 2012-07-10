@@ -2,7 +2,7 @@
 
 close all; clc, clear;
 
-datensatz=1;
+datensatz=2;
 
 if datensatz==1
     load('daten_fehlerfrei_2mA');
@@ -154,7 +154,7 @@ Spektrum(x, wn', fs, 1,'b',-1000,1000,-100,30, fignum);
 
 fignum=fignum+1;
 figure(fignum);
-spectrogram(x,512,255,512,5000)
+spectrogram(x,512,255,512,8000)
 
     if Bilder_abspeichern == 12113
          figure(fignum);
