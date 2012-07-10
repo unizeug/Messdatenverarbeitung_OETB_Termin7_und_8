@@ -20,7 +20,7 @@ end
 
 disp(length(x));
 
-lastlvl = 15;
+lastlvl = 1;
 
 Bilder_abspeichern = 1;
 
@@ -154,7 +154,7 @@ Spektrum(x, wn', fs, 1,'b',-1000,1000,-100,30, fignum);
 
 fignum=fignum+1;
 figure(fignum);
-spectrogram(x,512,255,512,fs)
+spectrogram(x,512,255,512,5000)
 
     if Bilder_abspeichern == 12113
          figure(fignum);
