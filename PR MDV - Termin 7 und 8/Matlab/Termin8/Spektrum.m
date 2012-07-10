@@ -5,7 +5,7 @@ function [BetragXf, PhaseXf] = Spektrum(xt, wn, fs, LogFlag,farbe,xmin,xmax,ymin
 % function [BetragXf, PhaseXf] = Spektrum(xt, wn, fs, LogFlag);
 % ??????????????????????????????????????????????????????
 % filename:           Spektrum.m
-% author:             Özgü Dogan, Timo Lausen, Boris Henckell
+% author:             ï¿½zgï¿½ Dogan, Timo Lausen, Boris Henckell
 % organisation:       TU Berlin 
 % project:            MDVPR
 % date:               21.05.2012
@@ -20,7 +20,7 @@ function [BetragXf, PhaseXf] = Spektrum(xt, wn, fs, LogFlag,farbe,xmin,xmax,ymin
 % xt = Signal im Zeitbereich
 % wn = Fensterfolge
 % fs = Abtastfrequenz
-% LogFlag = für Flag=1 ist y-Achse log. in dB dargestellt, sonst 0
+% LogFlag = fï¿½r Flag=1 ist y-Achse log. in dB dargestellt, sonst 0
 
 %Multiplikation des Zeitsignals und des Fensters
 ergebnis1 = xt.*wn;             
@@ -43,7 +43,7 @@ length(t);
 %Frequenzachse
 %f_DFT = fs*2*(0:(N-1))/(N-1);
 f_DFT = (-N/2:N/2-1)*fs/N;
-%ceil bzw floor als Lösung
+%ceil bzw floor als Lï¿½sung
 %neues Fenster zur Darstellung
 figure(fig);
 %Darstellung des Zeitsignals
@@ -53,7 +53,7 @@ plot(t,ergebnis1,farbe);
 %plot(t,wn,'r');
 hold off
 %stem(t,xt);
-AXIS([0 127 -1.2 1.2]) % Vorbereintungsaufgabe 4.3
+%AXIS([0 127 -1.2 1.2]) % Vorbereintungsaufgabe 4.3
  title('Zeitsignal');
  xlabel('t/s');
  ylabel('u/V');
@@ -67,10 +67,10 @@ else
     stem(f_DFT,BetragXf,farbe);
 end;
 AXIS([ xmin xmax ymin ymax]); % allgemeiner aufruf
-%AXIS([-1000 1000 -70 10])%für die Praxisaufgabe  5.x
-%AXIS([-1000 1000 0 1.5])%für die Praxisaufgabe  6.x
-%AXIS([-1000 1000 0 1.5])%für die Vorbereitungsaufgabe 2
-%Axis([-0.5 0.5 10^(-15) 10^(-5)])%für die Vorbereitungsaufgabe 3
+%AXIS([-1000 1000 -70 10])%fï¿½r die Praxisaufgabe  5.x
+%AXIS([-1000 1000 0 1.5])%fï¿½r die Praxisaufgabe  6.x
+%AXIS([-1000 1000 0 1.5])%fï¿½r die Vorbereitungsaufgabe 2
+%Axis([-0.5 0.5 10^(-15) 10^(-5)])%fï¿½r die Vorbereitungsaufgabe 3
 %ylim ([-30 5])
  title('Amplitudenspektrum');
  xlabel('f/Hz');
@@ -79,9 +79,9 @@ AXIS([ xmin xmax ymin ymax]); % allgemeiner aufruf
 subplot(3,1,3);
 plot(f_DFT, PhaseXf,farbe);
 %AXIS([ xmin xmax min(PhaseXf)*1.2 max(PhaseXf)*1.2]); % allgemeiner aufruf
-%AXIS([-1000 1000 min(PhaseXf)*1.2 max(PhaseXf)*1.2])%Für die Praxisaufgabe 5.x
-%AXIS([-1000 1000 -0.015 0.015])%Für die Vorbereitungsaufgabe 2
-%Axis([-0.5 0.5 -4*10^(-6) 4*10^(-6)])%für die Vorbereitungsaufgabe 3
+%AXIS([-1000 1000 min(PhaseXf)*1.2 max(PhaseXf)*1.2])%Fï¿½r die Praxisaufgabe 5.x
+%AXIS([-1000 1000 -0.015 0.015])%Fï¿½r die Vorbereitungsaufgabe 2
+%Axis([-0.5 0.5 -4*10^(-6) 4*10^(-6)])%fï¿½r die Vorbereitungsaufgabe 3
 title('Phasenspektrum');
  xlabel('f/Hz');
  ylabel('phi(f)');
