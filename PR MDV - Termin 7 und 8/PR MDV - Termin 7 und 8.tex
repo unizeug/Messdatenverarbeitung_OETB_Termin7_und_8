@@ -981,7 +981,7 @@
                             clip]{./Bilder/Termin8/fehlerfrei_hochlaufen_Spektrum.pdf}
                             %FIXME [width=640px,
                              %height=474px]
-                            \caption{Haar-Wavelet Zerlegung, Level 1}
+                            \caption{Strom-Spektrum bei hochlaufendem Motor}
                         \end{figure}
     
                     \end{minipage}
@@ -994,7 +994,7 @@
                             clip]{./Bilder/Termin8/fehlerfrei_hochlaufen_Spectrogam.pdf}
                             %FIXME [width=640px,
                              %height=474px]
-                            \caption{Daubechies-Wavelet Zerlegung, Level 1}
+                            \caption{Strom-Spectrogram bei hochlaufendem Motor}
                         \end{figure}
                     \vspace{-1.5em}
     
@@ -1002,6 +1002,24 @@
     
                 \end{tabular}
                 \end{center}
+                
+                \vspace{2em}
+                
+                Sowohl in der Zerlegung durch ein Haar-, als auch in der
+                Zerlegung mit einem Daubechies-Wavelet kann man sehen, dass die
+                Approximationskurven, wie erwartet den Originalsignalverlauf
+                annehmen, auch wenn es Unterschiede in der Amplitude vorhanden
+                sind. Das relevante an diesen Darstellungen ist erst ab Level 9
+                sichtbar. im 9. Level kann man erkennen, das die Detailkurven in
+                beiden Zerlegungen einen Ausschlag in dem Zeitpunkt des
+                Motoranschaltens vorweisen. Bei dem Haar-Wavelet ist dieser Peak
+                negativ, bei dem Daubechies-Wavelet dagegen im 9. Level erst
+                positiv, im 12. Level aber sowohl in den negativen als auch in
+                den positiven Bereich ausgeprägt. Diese Peaks in den
+                Detailkurven verdeutlichen damit den Anschaltvorgang des
+                Universalmotors.
+                
+                
                 
                 %Ende Vergleich Level 
                 
