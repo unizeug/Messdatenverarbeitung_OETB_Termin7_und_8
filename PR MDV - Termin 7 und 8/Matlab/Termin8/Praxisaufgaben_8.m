@@ -2,7 +2,7 @@
 
 close all; clc, clear;
 
-datensatz=3;
+datensatz=1;
 
 if datensatz==1
     load('daten_fehlerfrei_2mA');
@@ -20,9 +20,9 @@ end
 
 disp(length(x));
 
-lastlvl = 5;
+lastlvl = 15;
 
-Bilder_abspeichern = 0;
+Bilder_abspeichern = 1;
 
 S = haardeclevel_8_1_2(x,lastlvl);
 
@@ -133,12 +133,12 @@ end
 
 
 wn = ones(1,length(x));
-fs = 1;
+fs = 200000;
 
 
-Spektrum(x, wn', fs, 1,'b',-0.6,0.6,-100,30, fignum);
+Spektrum(x, wn', fs, 1,'b',-1000,1000,-100,30, fignum);
 
-    if Bilder_abspeichern == 1
+    if Bilder_abspeichern == 12113
          figure(fignum);
          if datensatz == 12113
             name=['../../Bilder/Termin8/fehlerfrei_gesaettig_Spektrum.pdf'];
@@ -154,7 +154,7 @@ Spektrum(x, wn', fs, 1,'b',-0.6,0.6,-100,30, fignum);
 
 fignum=fignum+1;
 figure(fignum);
-spectrogram(x,512,255,512,200000)
+spectrogram(x,512,255,512,fs)
 
     if Bilder_abspeichern == 12113
          figure(fignum);
