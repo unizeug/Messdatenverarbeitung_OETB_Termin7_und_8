@@ -53,7 +53,7 @@ plot(t,ergebnis1,farbe);
 %plot(t,wn,'r');
 hold off
 %stem(t,xt);
-AXIS([0 127 -1.2 1.2]) % Vorbereintungsaufgabe 4.3
+%AXIS([0 127 -1.2 1.2]) % Vorbereintungsaufgabe 4.3
  title('Zeitsignal');
  xlabel('t/s');
  ylabel('u/V');

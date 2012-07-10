@@ -22,7 +22,7 @@ disp(length(x));
 
 lastlvl = 5;
 
-Bilder_abspeichern = 1;
+Bilder_abspeichern = 0;
 
 S = haardeclevel_8_1_2(x,lastlvl);
 
@@ -61,7 +61,15 @@ for lvl=1:lastlvl
         plot(u2,'r')
         plot(v2,'c')
     hold off
-    title(['\bf (gesättigt, fehlerfrei) Haar Wavlet Stufe',num2str(lvl)]);
+    if datensatz == 1
+        title(['\bf (gesättigt, fehlerfrei) Haar Wavlet Stufe',num2str(lvl)]);
+    end
+    if datensatz ==2
+        title(['\bf (gesättigt, Lamellenfehler) Haar Wavlet Stufe',num2str(lvl)]);    
+    end
+    if datensatz == 3
+        title(['\bf (hochfahrend, fehlerfrei) Haar Wavlet Stufe',num2str(lvl)]);        
+    end
     xlabel('Zeit [s]');
     ylabel('Amplitude [A]');
     legend('Originalsignal','Approximation','Details');
@@ -94,7 +102,15 @@ for lvl=1:lastlvl
     ylabel('Amplitude [A]');
     legend('Originalsignal','Approximation','Details');
     
-    title(['\bf (gesättigt, fehlerfrei) Daubechies Wavlet Stufe ',num2str(lvl)]);
+    if datensatz == 1
+        title(['\bf (gesättigt, fehlerfrei) Daubechies Wavlet Stufe ',num2str(lvl)]);
+    end
+    if datensatz == 2
+        title(['\bf (gesättigt, lamellenfehler) Daubechies Wavlet Stufe ',num2str(lvl)]);
+    end
+    if datensatz == 3
+        title(['\bf (hochfahrend, fehlerfrei) Daubechies Wavlet Stufe ',num2str(lvl)]);        
+    end
     
     if Bilder_abspeichern == 1
         figure(fignum);
@@ -124,7 +140,7 @@ Spektrum(x, wn', fs, 1,'b',-0.6,0.6,-100,30, fignum);
 
     if Bilder_abspeichern == 1
          figure(fignum);
-         if datensatz == 1
+         if datensatz == 12113
             name=['../../Bilder/Termin8/fehlerfrei_gesaettig_Spektrum.pdf'];
          end
          if datensatz == 2
@@ -138,10 +154,10 @@ Spektrum(x, wn', fs, 1,'b',-0.6,0.6,-100,30, fignum);
 
 fignum=fignum+1;
 figure(fignum);
-spectrogram(x,512,255)
+spectrogram(x,512,255,512,200000)
 
     if Bilder_abspeichern == 12113
-         figure(812);
+         figure(fignum);
          
          if datensatz == 1
             name=['../../Bilder/Termin8/fehlerfrei_gesaettigt_Spectrogam.pdf'];
