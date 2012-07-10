@@ -42,7 +42,7 @@ for lvl=1:lastlvl
     vd2   = ones(1,N*2^lvl);
     
     j=1;
-%     Die Approximation und die Details auf die Länge von x normieren
+%     Die Approximation und die Details auf die Lï¿½nge von x normieren
     for i=1:N
         for k=1:2^lvl
             u2(j)    = u(i);
@@ -62,10 +62,10 @@ for lvl=1:lastlvl
         plot(v2,'c')
     hold off
     if datensatz == 1
-        title(['\bf (gesättigt, fehlerfrei) Haar Wavlet Stufe',num2str(lvl)]);
+        title(['\bf (gesï¿½ttigt, fehlerfrei) Haar Wavlet Stufe',num2str(lvl)]);
     end
     if datensatz ==2
-        title(['\bf (gesättigt, Lamellenfehler) Haar Wavlet Stufe',num2str(lvl)]);    
+        title(['\bf (gesï¿½ttigt, Lamellenfehler) Haar Wavlet Stufe',num2str(lvl)]);    
     end
     if datensatz == 3
         title(['\bf (hochfahrend, fehlerfrei) Haar Wavlet Stufe',num2str(lvl)]);        
@@ -103,10 +103,10 @@ for lvl=1:lastlvl
     legend('Originalsignal','Approximation','Details');
     
     if datensatz == 1
-        title(['\bf (gesättigt, fehlerfrei) Daubechies Wavlet Stufe ',num2str(lvl)]);
+        title(['\bf (gesï¿½ttigt, fehlerfrei) Daubechies Wavlet Stufe ',num2str(lvl)]);
     end
     if datensatz == 2
-        title(['\bf (gesättigt, lamellenfehler) Daubechies Wavlet Stufe ',num2str(lvl)]);
+        title(['\bf (gesï¿½ttigt, lamellenfehler) Daubechies Wavlet Stufe ',num2str(lvl)]);
     end
     if datensatz == 3
         title(['\bf (hochfahrend, fehlerfrei) Daubechies Wavlet Stufe ',num2str(lvl)]);        
