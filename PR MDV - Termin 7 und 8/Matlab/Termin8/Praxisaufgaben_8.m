@@ -140,7 +140,7 @@ fignum=fignum+1;
 figure(fignum);
 spectrogram(x,512,255)
 
-    if Bilder_abspeichern == 1
+    if Bilder_abspeichern == 12113
          figure(812);
          
          if datensatz == 1
