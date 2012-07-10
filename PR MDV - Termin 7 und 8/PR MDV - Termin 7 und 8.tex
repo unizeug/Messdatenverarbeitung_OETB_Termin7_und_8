@@ -178,18 +178,18 @@
         man in den Plots oben gut erkennen.
         
         \end{quote}%ende Chirp-Signal erzeugen
-	    
-	    \subsubsection{Matlab-Funktion: Frequenzverlau über der Zeit}
-	    \begin{quote}
-	    
-	    Als nächstes sollte eine Matlab-Funktion erstellt werden, die im
-	    Zeitbereichdie momentane Frequenz ermittelt. Dieser berechnete
-	    Frequenzverlauf über der Zeit sollte geplottet und mit dem erwarteten
-	    Verlauf verglichen werden. In die erstellte Funktion kann in den Codes am
-	    Ende des Protokolls eingesehen werden. Der entstandene Plot ist hier zu
-	    sehen:
-	    
-	    \begin{figure}[H]
+        
+        \subsubsection{Matlab-Funktion: Frequenzverlau über der Zeit}
+        \begin{quote}
+        
+        Als nächstes sollte eine Matlab-Funktion erstellt werden, die im
+        Zeitbereichdie momentane Frequenz ermittelt. Dieser berechnete
+        Frequenzverlauf über der Zeit sollte geplottet und mit dem erwarteten
+        Verlauf verglichen werden. In die erstellte Funktion kann in den Codes am
+        Ende des Protokolls eingesehen werden. Der entstandene Plot ist hier zu
+        sehen:
+        
+        \begin{figure}[H]
                     \centering
                         \includegraphics[scale=0.7, trim = 1cm 9cm 1.5cm 8cm,
                         clip]{./Bilder/Termin7/chirpsignal_vs_frequenzanstieg}
@@ -197,23 +197,23 @@
                             Frequenzanstieg, berechnet aus dem Zeitsignal}
                             \label{fig:./Bilder/chirpsignal_vs_frequenzanstieg}
                     \end{figure}
-	    \end{quote}
-	    
-	    Da beim Erstellen des Chirpsignals ein linearer Ansteig der Frequenz
-	    vorausgesetzt war, wurde auch ein linearer Frequenzverlauf erwartet. Das
-	    Ergebnis bestätigt die Erwartung.
-	    
-	    \end{quote}% ende Matlab-Funktion: Frequenzverlauf über der Zeit
-	    
-	    \subsubsection{Matlab-Funktion: Frequenzverlauf anhand Spektrogram}
-	    \begin{quote}
-	    
-	    Nun sollte der gleiche Frequenzverlauf anhand des Spektrogramms ermittelt
-	    werden. Dafür implementierten wir eine weitere Matlab-Funktion, welche in
-	    den Codes zu sehen ist. Das erwartete Ergebnis war wieder ein positiver
-	    linearer Anstieg.
-	    
-	    \begin{figure}[H]
+        \end{quote}
+        
+        Da beim Erstellen des Chirpsignals ein linearer Ansteig der Frequenz
+        vorausgesetzt war, wurde auch ein linearer Frequenzverlauf erwartet. Das
+        Ergebnis bestätigt die Erwartung.
+        
+        \end{quote}% ende Matlab-Funktion: Frequenzverlauf über der Zeit
+        
+        \subsubsection{Matlab-Funktion: Frequenzverlauf anhand Spektrogram}
+        \begin{quote}
+        
+        Nun sollte der gleiche Frequenzverlauf anhand des Spektrogramms ermittelt
+        werden. Dafür implementierten wir eine weitere Matlab-Funktion, welche in
+        den Codes zu sehen ist. Das erwartete Ergebnis war wieder ein positiver
+        linearer Anstieg.
+        
+        \begin{figure}[H]
                     \centering
                         \includegraphics[scale=0.7, trim = 1cm 9cm 1.5cm 8cm,
                         clip]{./Bilder/Termin7/chirpsignal_vs_frequenzanstieg_spectrogram}
@@ -221,28 +221,28 @@
                             Frequenzanstieg, berechnet aus dem Spektrogramm}
                             \label{fig:./Bilder/chirpsignal_vs_frequenzanstieg_spectrogram}
                     \end{figure} 
-	        
-	    \end{quote}% ende Matlab-Funktion: Frequenzverlauf anhand Spektrogram
+            
+        \end{quote}% ende Matlab-Funktion: Frequenzverlauf anhand Spektrogram
          
-	    \subsubsection{Drehzahl-Berechnung anhand Amplitudenspektrum des
-	    Motorstroms}
-	    \begin{quote}
-	    
-	    Zuletzt wurde die Drehzahl des verwendeten Motors berechnet. Dafür wurden
-	    uns drei Messreihen mit jeweils Strom- und Tachomesswerten vorgegeben.
-	    Zunächst sollten die Amplitudenspektren der Motorströme erstellt werden,
-	    welche uns durch die DFT der Stromwerte gelang. Die erhöhten Amplitudenwerte entsprachen
-	    dabei den einfachen Vielfachen der Drehfrequenz des Motors mit der
-	    jeweiligen Versorgungsspannung. Die deutlich herausstehenden Peaks dagegen
-	    traten nur bei dem 18- oder 36-fachen Vielfachen der Drehfrequenz auf.
-	    Dieses Wissen nutzen wir, indem wir anhand eines Matlabalgorithmuses den
-	    höhsten Peak mit Index ausgaben lassen (die höchsten Peaks waren stets
-	    jene, die am nächsten zu der null standen), um daraus eine Frequenz zu
-	    bestimmen und durch 18 zu teilen. So berechneten wir die drei geforderten
-	    Drehfrequenzen. Der Algorithmus steht in den Codes, die drei
-	    Amplitudenspektren sehen folgendermaßen aus:
-	    
-	     \begin{center}
+        \subsubsection{Drehzahl-Berechnung anhand Amplitudenspektrum des
+        Motorstroms}
+        \begin{quote}
+        
+        Zuletzt wurde die Drehzahl des verwendeten Motors berechnet. Dafür wurden
+        uns drei Messreihen mit jeweils Strom- und Tachomesswerten vorgegeben.
+        Zunächst sollten die Amplitudenspektren der Motorströme erstellt werden,
+        welche uns durch die DFT der Stromwerte gelang. Die erhöhten Amplitudenwerte entsprachen
+        dabei den einfachen Vielfachen der Drehfrequenz des Motors mit der
+        jeweiligen Versorgungsspannung. Die deutlich herausstehenden Peaks dagegen
+        traten nur bei dem 18- oder 36-fachen Vielfachen der Drehfrequenz auf.
+        Dieses Wissen nutzen wir, indem wir anhand eines Matlabalgorithmuses den
+        höhsten Peak mit Index ausgaben lassen (die höchsten Peaks waren stets
+        jene, die am nächsten zu der null standen), um daraus eine Frequenz zu
+        bestimmen und durch 18 zu teilen. So berechneten wir die drei geforderten
+        Drehfrequenzen. Der Algorithmus steht in den Codes, die drei
+        Amplitudenspektren sehen folgendermaßen aus:
+        
+         \begin{center}
                 \begin{tabular}{ll}
     
                 \hspace{-12em}
@@ -275,26 +275,23 @@
     
                 \end{tabular}
                 \end{center}
-	           
-	           
-	           \begin{figure}[H]
+               
+               
+               \begin{figure}[H]
                     \centering
                         \includegraphics[scale=0.63, trim = 1cm 9cm 1.5cm 8cm,
                         clip]{./Bilder/Termin7/ampl_spektrum_messung3}
                         \caption{Spektrum des Motorstroms bei 30V}
                \end{figure}
-	    
-	    Die berechneten Drehfrequenzen betragen für die erste Messung ($10V$) =
-	    $2.1389 Hz$, für die zweite Messung ($20V$) = $6.3056 Hz$ und für die
-	    dritte Messung ($30V$) = $10.4723 Hz$.\\
-	    
-	    \TODO{Hier sind die Werte falsch, weil wir die falschen Paeks rausgesucht
-	    haben, Fehler muss noch korrigiert werden}
-	    
-	    Außerdem wurden die Drehfrequenzen auch aus den jeweiligen Tachosignalen
-	    bestimmt. Dafür wurde genauso vogegangen wie bei den Motorströmen. Die
-	    Spektren sind hier:
-	       
+        
+        Die berechneten Drehfrequenzen betragen für die erste Messung ($10V$) =
+        $19.5627 Hz$, für die zweite Messung ($20V$) = $56.8131 Hz$ und für die
+        dritte Messung ($30V$) = $94.31343 Hz$.\\
+        
+        Außerdem wurden die Drehfrequenzen auch aus den jeweiligen Tachosignalen
+        bestimmt. Dafür wurde genauso vogegangen wie bei den Motorströmen. Die
+        Spektren sind hier:
+           
         \begin{center}
                 \begin{tabular}{ll}
     
@@ -340,16 +337,16 @@
         Die anhand der Tachosignale berechneten Drehfrequenzen betragen für die
         erste Messung ($10V$) = $19.5627 Hz$, für die zweite Messung ($20V$) =
         $56.8131 Hz$ und für die dritte Messung ($30V$) = $94.3134 Hz$.\\
-	    Es fällt auf, dass die Drehzahlen, welche über die Ströme berechnet werden,
-	    ca. 4mal kleiner sind als die Drehzahlen über die Tachowerte. Ein
-	    konstanter Faktor von 4 kann angenommen werden.
-	    
-	    \end{quote}%ende Drehzahl-Berechnung anhand Amplitudenspektrum des
-	    % Motorstroms
+        Es fällt auf, dass die Drehzahlen, welche über die Ströme berechnet werden,
+        ca. 4mal kleiner sind als die Drehzahlen über die Tachowerte. Ein
+        konstanter Faktor von 4 kann angenommen werden.
         
-	    
-	\end{quote}
-	
+        \end{quote}%ende Drehzahl-Berechnung anhand Amplitudenspektrum des
+        % Motorstroms
+        
+        
+    \end{quote}
+    
     \subsection{Vorbereitungsaufgaben zu Termin 8}
     \begin{quote}
     
@@ -736,20 +733,19 @@
 \section{Durchführungen}
 \begin{quote}
 
-		\subsection{Durchführung zu Termin 7}
-		\begin{quote}
+        \subsection{Durchführung zu Termin 7}
+        \begin{quote}
             
+            \TODO{Timo schreibt was} \\
             
-            
-		\end{quote}%Ende der Durchführung von Termin 7
+        \end{quote}%Ende der Durchführung von Termin 7
 
-		\subsection{Durchführung zu Termin 8}
-		\begin{quote}
+        \subsection{Durchführung zu Termin 8}
+        \begin{quote}
         
-            Der Versuchsaufbau im 8.Termin des Praktikums ähnelte zwar der
-            gleich Aufbau wie im 7.Termin. Anstatt aber den
-            Motorstrom und das Tachosignal aufzunehmen, maßen wir nur den Strom
-            (AC- und DC-Anteil) des fehlerfreien Universalmotors. Dieses
+            Der Versuchsaufbau im 8.Termin des Praktikums ähnelte sehr dem Aufbau aus 7.Termin. Anstatt den
+            Motorstrom und das Tachosignal aufzunehmen, haben wir diesesmal nur den Strom
+            (AC- und DC-Anteil) des fehlerfreien Universalmotors aufgenommen. Dieses
             Signal wurde dann mithilfe von Haar- und Daubechies-Wavelets zerlegt
             und untersucht. Dabei sollten geeignete Approximations- und
             Detailsdarstellungen gewählt werden, um den Einschaltzeitpunkt und
@@ -760,8 +756,7 @@
             aufgenommen. Diese Stromsignale der zwei verschiedenen Motoren
             wurden dann anhand der Wavelets auf Unterschiede untersucht.
             Die Ergebnisse werden in der Auswertung diskutiert. 
-            
-		\end{quote}%Ende der Durchführungen von Termin 8
+        \end{quote}%Ende der Durchführungen von Termin 8
 
 \end{quote}%Ende Durchführungen
 
@@ -770,15 +765,697 @@
 %--------------------------------------------------------------------
 \section{Auswertung}
 \begin{quote}
-	\subsection{Auswertung Termin 7}
+    \subsection{Auswertung Termin 7}
     \begin{quote}
-
+        \TODO{timo schreibt was} \\
     \end{quote}  % Ende Subsection Auswertung Termin 7
 
     \subsection{Auswertung Termin 8}
     \begin{quote}
-
-
+        \TODO{noch zu schreiben} \\
+        
+        Zunächst werten wir die Messung des Motorstroms am hochfahrenden
+        Universalmotor, indem wir das Originalsignal mit einem Haar- und einem
+        Daubechies-Wavelet zerlegen und uns die Details und die Approximationen
+        bis zum 12. Level angucken. Die geplotteten Ergebnisse sind hier:
+        
+         \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-8em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_hochlaufen_Haar_Wavlet_lvl_1}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Haar-Wavelet Zerlegung, Level 1}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_hochlaufen_Daubechies_Wavlet_lvl_1}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Daubechies-Wavelet Zerlegung, Level 1}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                
+                %Ende Vergleich Level 1
+       
+        \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-8em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_hochlaufen_Haar_Wavlet_lvl_3}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Haar-Wavelet Zerlegung, Level 3}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_hochlaufen_Daubechies_Wavlet_lvl_3}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Daubechies-Wavelet Zerlegung, Level 3}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                
+                %Ende Vergleich Level 2
+                
+                
+          \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-8em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_hochlaufen_Haar_Wavlet_lvl_6}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Haar-Wavelet Zerlegung, Level 6}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_hochlaufen_Daubechies_Wavlet_lvl_6}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Daubechies-Wavelet Zerlegung, Level 6}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+    
+                %ende Vergleich Level 3
+                
+                
+        \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-8em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_hochlaufen_Haar_Wavlet_lvl_9}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Haar-Wavelet Zerlegung, Level 9}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_hochlaufen_Daubechies_Wavlet_lvl_9}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Daubechies-Wavelet Zerlegung, Level 9}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+    
+                %ende Vergleich Level 4
+                
+                
+                    \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-8em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_hochlaufen_Haar_Wavlet_lvl_12}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Haar-Wavelet Zerlegung, Level 12}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_hochlaufen_Daubechies_Wavlet_lvl_12}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Daubechies-Wavelet Zerlegung, Level 12}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                
+                %ende Vergleich fehlerfrei_hochlaufen_
+                
+                
+                        \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-8em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_hochlaufen_Spektrum.pdf}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Haar-Wavelet Zerlegung, Level 1}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_hochlaufen_Spectrogam.pdf}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Daubechies-Wavelet Zerlegung, Level 1}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                
+                %Ende Vergleich Level 
+                
+                Fehlerfrei gesättigt
+                
+                 \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-8em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_gesaettigt_Haar_Wavlet_lvl_1}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Haar-Wavelet Zerlegung, Level 1}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_gesaettigt_Daubechies_Wavlet_lvl_1}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Daubechies-Wavelet Zerlegung, Level 1}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                
+                %Ende Vergleich Level 1
+       
+        \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-8em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_gesaettigt_Haar_Wavlet_lvl_3}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Haar-Wavelet Zerlegung, Level 3}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_gesaettigt_Daubechies_Wavlet_lvl_3}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Daubechies-Wavelet Zerlegung, Level 3}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                
+                %Ende Vergleich Level 2
+                
+                
+          \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-8em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_gesaettigt_Haar_Wavlet_lvl_6}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Haar-Wavelet Zerlegung, Level 6}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_gesaettigt_Daubechies_Wavlet_lvl_6}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Daubechies-Wavelet Zerlegung, Level 6}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+    
+                %ende Vergleich Level 3
+                
+                
+        \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-8em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_gesaettigt_Haar_Wavlet_lvl_9}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Haar-Wavelet Zerlegung, Level 9}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_gesaettigt_Daubechies_Wavlet_lvl_9}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Daubechies-Wavelet Zerlegung, Level 9}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+    
+                %ende Vergleich Level 4
+                
+                
+                    \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-8em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_gesaettigt_Haar_Wavlet_lvl_12}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Haar-Wavelet Zerlegung, Level 12}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_gesaettigt_Daubechies_Wavlet_lvl_12}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Daubechies-Wavelet Zerlegung, Level 12}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                
+                
+                                        \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-8em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_gesaettig_Spektrum.pdf}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Haar-Wavelet Zerlegung, Level 1}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/fehlerfrei_gesaettig_Spectrogam.pdf}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Daubechies-Wavelet Zerlegung, Level 1}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                
+                %ende Vergleich fehlerfrei_gesaettigt_
+                
+                \vspace{20em}
+                
+                 \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-8em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/lamellenfehler_gesaettigt_Haar_Wavlet_lvl_1}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Haar-Wavelet Zerlegung, Level 1}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/lamellenfehler_gesaettigt_Daubechies_Wavlet_lvl_1}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Daubechies-Wavelet Zerlegung, Level 1}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                
+                %Ende Vergleich Level 1
+       
+        \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-8em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/lamellenfehler_gesaettigt_Haar_Wavlet_lvl_3}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Haar-Wavelet Zerlegung, Level 3}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/lamellenfehler_gesaettigt_Daubechies_Wavlet_lvl_3}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Daubechies-Wavelet Zerlegung, Level 3}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                
+                %Ende Vergleich Level 2
+                
+                
+          \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-8em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/lamellenfehler_gesaettigt_Haar_Wavlet_lvl_6}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Haar-Wavelet Zerlegung, Level 6}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/lamellenfehler_gesaettigt_Daubechies_Wavlet_lvl_6}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Daubechies-Wavelet Zerlegung, Level 6}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+    
+                %ende Vergleich Level 3
+                
+                
+        \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-8em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/lamellenfehler_gesaettigt_Haar_Wavlet_lvl_9}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Haar-Wavelet Zerlegung, Level 9}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/lamellenfehler_gesaettigt_Daubechies_Wavlet_lvl_9}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Daubechies-Wavelet Zerlegung, Level 9}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+    
+                %ende Vergleich Level 4
+                
+                
+                    \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-8em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/lamellenfehler_gesaettigt_Haar_Wavlet_lvl_12}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Haar-Wavelet Zerlegung, Level 12}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/lamellenfehler_gesaettigt_Daubechies_Wavlet_lvl_12}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Daubechies-Wavelet Zerlegung, Level 12}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                
+                \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-8em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/lamellenfehler_gesaettig_Spektrum.pdf}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Haar-Wavelet Zerlegung, Level 1}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6cm 1cm
+                            7.5cm,
+                            clip]{./Bilder/Termin8/lamellenfehler_gesaettig_Spectrogam.pdf}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Daubechies-Wavelet Zerlegung, Level 1}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                
+                %ende Vergleich Level 5 lamellenfehler_gesaettigt_
+        
     \end{quote}  % Ende Subsection Auswertung Termin 8
 \end{quote} %Ende section
 
@@ -791,24 +1468,24 @@
 \section{Quellcodes}
 \begin{quote}
 
-	\subsection{Codes aus Termin 7}
-	\begin{quote}
-	    
-	    \subsubsection{Frequenzverlauf über der Zeit}
-	    \begin{quote}
-	        \lstinputlisting[
-	            caption={frequenz imZeitbereich ausSignal},
-	            label=lst:Matlab]
-	            {./Matlab/Termin7/frequenz_imZeitbereich_ausSignal.m}
-	    \end{quote}
+    \subsection{Codes aus Termin 7}
+    \begin{quote}
+        
+        \subsubsection{Frequenzverlauf über der Zeit}
+        \begin{quote}
+            \lstinputlisting[
+                caption={frequenz imZeitbereich ausSignal},
+                label=lst:Matlab]
+                {./Matlab/Termin7/frequenz_imZeitbereich_ausSignal.m}
+        \end{quote}
 
-	    \subsubsection{Frequenzverlauf aus dem Spektrogram}
-	    \begin{quote}
-	        \lstinputlisting[
-	            caption={frequenz durch Spektogramm},
-	            label=lst:Matlab]
-	            {./Matlab/Termin7/frequenz_durch_Spektogramm.m}
-	    \end{quote}
+        \subsubsection{Frequenzverlauf aus dem Spektrogram}
+        \begin{quote}
+            \lstinputlisting[
+                caption={frequenz durch Spektogramm},
+                label=lst:Matlab]
+                {./Matlab/Termin7/frequenz_durch_Spektogramm.m}
+        \end{quote}
 
         \subsubsection{Algorithmus zur Drehfrequenzberechnung}
         \begin{quote}
@@ -817,37 +1494,37 @@
                 label=lst:Matlab]
                 {./Matlab/Termin7/Vorbereitungsaufgabe4.m}
         \end{quote}
-	    
-	\end{quote}%ende Codes aus Termin7
-	
-	\subsection{Codes aus Termin 8}
-	\begin{quote}
-	
-	   \subsubsection{Funktion haardec.m}
-	   \begin{quote}
-	   \lstinputlisting[
+        
+    \end{quote}%ende Codes aus Termin7
+    
+    \subsection{Codes aus Termin 8}
+    \begin{quote}
+    
+       \subsubsection{Funktion haardec.m}
+       \begin{quote}
+       \lstinputlisting[
                 caption={Funktion haardec.m},
                 label=lst:Matlab]
                 {./Matlab/Termin8/haardec_8_1_1.m}
-	   \end{quote}
-	   
-	   \subsubsection{Funktion haardeclevel.m}
-	   \begin{quote}
-	   \lstinputlisting[
+       \end{quote}
+       
+       \subsubsection{Funktion haardeclevel.m}
+       \begin{quote}
+       \lstinputlisting[
                 caption={Funktion haardeclevel.m},
                 label=lst:Matlab]
                 {./Matlab/Termin8/haardeclevel_8_1_2.m}
-	   \end{quote}
-	   
-	   \subsubsection{Funktion getAppDet.m}
-	   \begin{quote}
-	   \lstinputlisting[
+       \end{quote}
+       
+       \subsubsection{Funktion getAppDet.m}
+       \begin{quote}
+       \lstinputlisting[
                 caption={Funktion getAppDet.m},
                 label=lst:Matlab]
                 {./Matlab/Termin8/getAppDet_8_1_3.m}
-	   \end{quote}
-	   
-	   \subsubsection{Funktion Daubechies\_Wavelets.m}
+       \end{quote}
+       
+       \subsubsection{Funktion Daubechies\_Wavelets.m}
        \begin{quote}
        \lstinputlisting[
                 caption={Funktion Daubechies\_Wavelets.m},
