@@ -1270,7 +1270,25 @@
                 
                 \vspace{20em}
                 
-                \TODO{Auswertung schreiben}
+                An den Zerlegungen des Stromsignals anhand beiden Wavelets kann
+                man zunächst erkennen, dass die Approximationen stets das
+                komplette Originalsignal überlagern, da sie den selben Verlauf
+                mit einer höheren Amplitude annehmen. Die Details haben bei
+                beiden Wavelets eine relativ kleine Amplitude bis zum 3. Level,
+                wobei die Amplituden der Daubechies-Wavelets-Details stets
+                eitwas niedriger ausfallen. Ab dem 6.Level, steigen die
+                Amplituden an, bis sie im 9. bis 12.Level fast so hoch sind, wie
+                die Amplituden der Approximationen. Auch der Verlauf der Details
+                ähnelt sich stark dem Stromverlauf im gesättigten Zustand.\\
+                
+                Das Spektrum zeigt uns ein erwartetes Strom-Zeitsignal, wobei
+                das Amplitudenspektrum Frequenzanteile bis zu $4kHz$ aufweist.
+                Das Spektrogramm zeigt Frequenzanteile bis zu $100Hz$, wobei
+                auch hier ein leichter Übergang von rot zu gelb bis zu ca.
+                $300Hz$ vorhanden ist. Den blauen Bereich des Spektrogramms kann
+                man erneut als Rauschen definieren.
+                
+                \vspace{2em}
                 
                 Als nächtes folgen die Zerlegungen des Stroms bei dem mit
                 Lamellenfehler belasteten Motor:
@@ -1500,7 +1518,26 @@
                 
                 %ende Vergleich Level 5 lamellenfehler_gesaettigt_
                 
-                \TODO{Auswertung schreiben}
+                Auch bei den Zelegungen des Stromsignals des Motors mit
+                Lamellenfehler kann man die Originalsignale nicht mehr sehen, da
+                sie von den Approximationskurven mit gleichem Verlauf und
+                höheren Amplituden überlagert werden. Die Detailkurven werden bis zu Level 9
+                konstant in der Amplitude größer. In Level 12 kann man dann
+                auffällige Welligkeiten im Verlauf feststellen. Abhängig von der
+                Zeit entstehen Wellenbäuche und -täler, welche auf den
+                Lamellenfehler im Motor zurückzuführen sind. Da diese Art
+                von Auffälligkeiten in der Zerlegung von gesättigten
+                Stromsignalen auftreten, ist der Einsatz von Waveltes in der
+                Fehlerdiagnose von Motoren möglich.\\
+                
+                Ähnliche Welligkeiten machen sich auch im Amplitudenspektrum
+                bemerkbar. Im Spektrogramm dagegen ist keine Auffälligkeit
+                wahrnehmbar, außer dass der Farbverlauf von rot (den
+                nennenswerten Frequenzen) zu gelb (weniger relevante Frequenzen)
+                ein wenig unklarer Verläuft als beim Spektrogramm des
+                fehlerfreien Motors.
+                
+                
     \end{quote}  % Ende Subsection Auswertung Termin 8
 \end{quote} %Ende section
 
